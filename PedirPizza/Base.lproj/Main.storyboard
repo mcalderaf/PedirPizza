@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oqJ-kn-v46">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oqJ-kn-v46">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -27,25 +27,28 @@
                                 <rect key="frame" x="251" y="252" width="98" height="30"/>
                                 <state key="normal" title="Tipo de queso"/>
                                 <connections>
-                                    <segue destination="23l-9a-jqW" kind="show" id="Mzh-qA-zWj"/>
+                                    <segue destination="23l-9a-jqW" kind="show" identifier="IdQueso" id="Mzh-qA-zWj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSe-5D-6IH">
                                 <rect key="frame" x="257" y="330" width="86" height="30"/>
                                 <state key="normal" title="Ingredientes"/>
                                 <connections>
-                                    <segue destination="Nnv-se-vUT" kind="show" id="RkF-wu-lnU"/>
+                                    <segue destination="Nnv-se-vUT" kind="show" identifier="IdIngredientes" id="RkF-wu-lnU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRq-R0-Jxv">
                                 <rect key="frame" x="247" y="178" width="93" height="30"/>
                                 <state key="normal" title="Tipo de masa"/>
                                 <connections>
-                                    <segue destination="QOE-Eh-yiE" kind="show" id="5Cn-qx-wCP"/>
+                                    <segue destination="QOE-Eh-yiE" kind="show" identifier="IdMasa" id="5Cn-qx-wCP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Llenar pedido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZf-Fo-Kul">
-                                <rect key="frame" x="247" y="472" width="105" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Llenar pedido" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZf-Fo-Kul">
+                                <rect key="frame" x="72" y="472" width="409" height="71"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="71" id="tyk-ag-Mse"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -66,26 +69,41 @@
                                 <rect key="frame" x="266" y="111" width="55" height="30"/>
                                 <state key="normal" title="Tamaño"/>
                                 <connections>
-                                    <segue destination="c3e-uB-z5U" kind="show" id="fGW-vf-0W6"/>
+                                    <segue destination="c3e-uB-z5U" kind="show" identifier="IdTamaño" id="fGW-vf-0W6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H6n-zF-uaD">
+                                <rect key="frame" x="241" y="64" width="105" height="30"/>
+                                <state key="normal" title="Iniciar Pedido"/>
+                                <connections>
+                                    <action selector="iniciarPedido:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGD-fu-cL7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-23.5" id="5KH-tS-wS9"/>
                             <constraint firstItem="yRq-R0-Jxv" firstAttribute="top" secondItem="cSf-b5-WVV" secondAttribute="bottom" constant="37" id="5cM-CR-u3h"/>
+                            <constraint firstItem="H6n-zF-uaD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9a7-FB-gO1"/>
                             <constraint firstItem="tWn-Ox-GJN" firstAttribute="top" secondItem="CSe-5D-6IH" secondAttribute="bottom" constant="52" id="CYU-BN-Ncs"/>
+                            <constraint firstItem="H6n-zF-uaD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-6.5" id="D2I-Us-qQZ"/>
                             <constraint firstItem="jes-hC-spj" firstAttribute="centerX" secondItem="cSf-b5-WVV" secondAttribute="centerX" constant="6.5" id="IN1-UQ-SI9"/>
                             <constraint firstItem="oZf-Fo-Kul" firstAttribute="top" secondItem="tWn-Ox-GJN" secondAttribute="bottom" constant="30" id="OkJ-L5-6l1"/>
                             <constraint firstItem="CSe-5D-6IH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pkc-Do-jkO"/>
                             <constraint firstItem="NYg-A2-tk7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QED-R9-1ml"/>
+                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-23.5" id="UTY-bC-7nD"/>
+                            <constraint firstItem="H6n-zF-uaD" firstAttribute="trailing" secondItem="tWn-Ox-GJN" secondAttribute="trailing" id="Xu0-hm-7LD"/>
+                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-23.5" id="YBF-Og-9FB"/>
                             <constraint firstItem="tWn-Ox-GJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQa-nN-Z5R"/>
                             <constraint firstItem="cSf-b5-WVV" firstAttribute="centerX" secondItem="NYg-A2-tk7" secondAttribute="centerX" constant="-6.5" id="fpf-er-XAK"/>
-                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hlG-uy-AOO"/>
+                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-23.5" id="hlG-uy-AOO"/>
+                            <constraint firstItem="yRq-R0-Jxv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-6.5" id="lqB-gj-paK"/>
                             <constraint firstItem="y3c-jy-aDJ" firstAttribute="top" secondItem="jes-hC-spj" secondAttribute="bottom" constant="6" id="m4b-u5-djf"/>
                             <constraint firstItem="jes-hC-spj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mXl-Ma-wcG"/>
                             <constraint firstItem="NYg-A2-tk7" firstAttribute="top" secondItem="yRq-R0-Jxv" secondAttribute="bottom" constant="44" id="q3e-EH-EFD"/>
-                            <constraint firstItem="NYg-A2-tk7" firstAttribute="centerX" secondItem="oZf-Fo-Kul" secondAttribute="centerX" id="q4x-oF-XY3"/>
-                            <constraint firstItem="yRq-R0-Jxv" firstAttribute="leading" secondItem="oZf-Fo-Kul" secondAttribute="leading" id="rMe-Us-DJA"/>
+                            <constraint firstItem="NYg-A2-tk7" firstAttribute="centerX" secondItem="oZf-Fo-Kul" secondAttribute="centerX" constant="23.5" id="q4x-oF-XY3"/>
+                            <constraint firstItem="oZf-Fo-Kul" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-23.5" id="qXl-7C-TF5"/>
+                            <constraint firstItem="yRq-R0-Jxv" firstAttribute="leading" secondItem="oZf-Fo-Kul" secondAttribute="leading" constant="175" id="rMe-Us-DJA"/>
                             <constraint firstItem="cSf-b5-WVV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="rgH-Mg-I7N"/>
                             <constraint firstItem="CSe-5D-6IH" firstAttribute="top" secondItem="NYg-A2-tk7" secondAttribute="bottom" constant="48" id="wli-pg-4Sf"/>
                         </constraints>
@@ -162,7 +180,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredientes: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09e-um-pPg">
                                 <rect key="frame" x="248" y="486" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gi-fQ-xEd">
@@ -245,7 +263,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Tamaño: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGn-iO-RtW">
                                 <rect key="frame" x="263" y="440" width="75" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -327,7 +345,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Queso: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKj-RK-bs2">
                                 <rect key="frame" x="262" y="432" width="59" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -397,7 +415,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Masa:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93C-iM-ZTk">
                                 <rect key="frame" x="277" y="410" width="46" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

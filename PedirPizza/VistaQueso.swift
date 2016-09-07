@@ -10,6 +10,7 @@ import UIKit
 
 class VistaQueso: UIViewController {
     var cade1: String = ""
+    var PizzaAux:Pizza=Pizza()
     
     @IBOutlet weak var resultaQueso: UILabel!
     
@@ -19,9 +20,9 @@ class VistaQueso: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
         let resultado:String = cade1
-        let sigVista = segue.sourceViewController as! ViewController
+        let sigVista = segue.destinationViewController as! ViewController
         print(" + "+resultado)
-        sigVista.cadeQueso = resultado
+        sigVista.PizzaAux.queso = resultado
         
     }
     override func didReceiveMemoryWarning() {
@@ -30,21 +31,25 @@ class VistaQueso: UIViewController {
     
     @IBAction func Mozarela(sender: AnyObject) {
         cade1 = "Mozarela"
+        PizzaAux.queso=cade1
         resultaQueso.text = "Queso: "+cade1
     }
     
     @IBAction func Cheddar(sender: AnyObject) {
         cade1 = "Cheddar"
+        PizzaAux.queso=cade1
         resultaQueso.text = "Queso: "+cade1
     }
     
     @IBAction func Parmesano(sender: AnyObject) {
         cade1 = "Parmesano"
+        PizzaAux.queso=cade1
         resultaQueso.text = "Queso: "+cade1
     }
     
     @IBAction func SinQueso(sender: AnyObject) {
         cade1 = "SinQueso"
+        PizzaAux.queso=cade1
         resultaQueso.text = "Queso: "+cade1
     }
 

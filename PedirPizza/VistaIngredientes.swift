@@ -8,8 +8,11 @@
 
 import UIKit
 
+
 class VistaIngredientes: UIViewController {
+    var PizzaAux:Pizza=Pizza()
     var cade1: String = ""
+    var count = 0
     
     @IBOutlet weak var resuIngred: UILabel!
    
@@ -19,9 +22,9 @@ class VistaIngredientes: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let resultado:String = cade1
-        let sigVista = segue.sourceViewController as! ViewController
+        let sigVista = segue.destinationViewController as! ViewController
         print(" + "+resultado)
-        sigVista.cadeIng = resultado
+        sigVista.PizzaAux.ingredientes = resultado
         
     }
     override func didReceiveMemoryWarning() {
@@ -29,39 +32,67 @@ class VistaIngredientes: UIViewController {
     }
 
     @IBAction func Jamon(sender: AnyObject) {
-        cade1 = "Jamon"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Jam"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
 
 
     @IBAction func Pepperoni(sender: AnyObject) {
-        cade1 = "Pepperoni"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Pep"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
     
     @IBAction func Pavo(sender: AnyObject) {
-        cade1 = "Pavo"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Pav"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
 
     @IBAction func Salchicha(sender: AnyObject) {
-        cade1 = "Salchicha"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Sal"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
 
     @IBAction func Aceituna(sender: AnyObject) {
-        cade1 = "Aceituna"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Ace"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
 
     @IBAction func Cebolla(sender: AnyObject) {
-        cade1 = "Cebolla"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Ceb"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
  
     @IBAction func Piña(sender: AnyObject) {
-        cade1 = "Piña"
-        resuIngred.text = "Ingrediente: "+cade1
+        if count<5 {
+            cade1 = "Piñ"
+            PizzaAux.ingredientes=PizzaAux.ingredientes+" "+cade1
+            resuIngred.text = PizzaAux.ingredientes
+            count=count+1
+        }
     }
-    
+
 }

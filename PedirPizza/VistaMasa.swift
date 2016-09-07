@@ -10,6 +10,7 @@ import UIKit
 
 class VistaMasa: UIViewController {
     var cade1: String = ""
+    var PizzaAux:Pizza=Pizza()
     
     @IBOutlet weak var resuMasa: UILabel!
     
@@ -19,9 +20,9 @@ class VistaMasa: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let resultado:String = cade1
-        let sigVista = segue.sourceViewController as! ViewController
+        let sigVista = segue.destinationViewController as! ViewController
         print(" + "+resultado)
-        sigVista.cadeMasa = resultado
+        sigVista.PizzaAux.masa = resultado
         
     }
     override func didReceiveMemoryWarning() {
@@ -29,14 +30,17 @@ class VistaMasa: UIViewController {
     }
     @IBAction func Delgada(sender: AnyObject) {
         cade1 = "Delgada"
+        PizzaAux.masa=cade1
         resuMasa.text = "Masa: "+cade1
     }
     @IBAction func Crujiente(sender: AnyObject) {
         cade1 = "Crujiente"
+        PizzaAux.masa=cade1
         resuMasa.text = "Masa: "+cade1
     }
     @IBAction func Gruesa(sender: AnyObject) {
         cade1 = "Gruesa"
+        PizzaAux.masa=cade1
         resuMasa.text = "Masa: "+cade1
 
     }
